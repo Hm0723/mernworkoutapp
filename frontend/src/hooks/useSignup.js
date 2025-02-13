@@ -13,8 +13,9 @@ export const useSignup = () => {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/api/user/signup`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({email, password})
+            body: JSON.stringify({ email, password })
         })
+        
         console.log(response)
         const json = await response.json();
 
