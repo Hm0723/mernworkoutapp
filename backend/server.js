@@ -53,3 +53,8 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+  // Default route for the root URL
+app.get("/", (req, res) => {
+  res.send("MERN Workout API is running...");
+});
